@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-slate-950: var(--app-bg);
+  --color-slate-900: var(--app-surface);
+  --color-slate-800: var(--app-surface-raised);
+  --color-slate-700: var(--app-border);
+  --color-slate-600: var(--app-border-strong);
+  --color-slate-500: var(--app-muted);
+  --color-slate-400: var(--app-muted);
+  --color-slate-300: var(--app-secondary);
+  --color-slate-200: var(--app-text);
+  --color-slate-100: var(--app-text);
+  --color-cyan-500: var(--app-accent);
+  --color-cyan-400: var(--app-accent-strong);
+  --color-cyan-300: var(--app-accent-strong);
+  --color-cyan-200: var(--app-accent-soft);
+  --color-blue-500: var(--app-accent);
+  --color-blue-400: var(--app-accent-strong);
+  --color-violet-500: var(--app-accent-muted);
+  --color-violet-400: var(--app-accent-muted);
+  --color-violet-300: var(--app-accent-soft);
+  --color-violet-200: var(--app-accent-soft);
+  --color-emerald-500: var(--app-success);
+  --color-emerald-400: var(--app-success);
+  --color-emerald-300: var(--app-success-soft);
+  --color-emerald-200: var(--app-success-soft);
+  --color-amber-500: var(--app-warning);
+  --color-amber-400: var(--app-warning);
+  --color-amber-300: var(--app-warning-soft);
+  --color-amber-200: var(--app-warning-soft);
+  --color-red-400: var(--app-error);
+  --color-red-300: var(--app-error-soft);
+  --radius-3xl: 0.875rem;
+  --radius-2xl: 0.75rem;
+  --radius-xl: 0.625rem;
+  --radius-lg: 0.5rem;
+}
+
+:root {
+  --app-bg: #111519;
+  --app-surface: #191f25;
+  --app-surface-raised: #222a32;
+  --app-border: #303a44;
+  --app-border-strong: #46525e;
+  --app-text: #edf1f5;
+  --app-secondary: #c2cbd3;
+  --app-muted: #8c99a5;
+  --app-accent: #438eae;
+  --app-accent-strong: #78b6cd;
+  --app-accent-soft: #b0d9e5;
+  --app-accent-muted: #788ba9;
+  --app-success: #459b77;
+  --app-success-soft: #8bc8a9;
+  --app-warning: #bb8844;
+  --app-warning-soft: #e1bb78;
+  --app-error: #bc6f73;
+  --app-error-soft: #db9695;
+  --app-focus: #82c6dc;
+  --app-series-cyan: #589bb5;
+  --app-series-green: #619b7d;
+  --app-series-blue: #7098bb;
+  --app-series-muted: #828ca5;
+  --app-series-amber: #bb9257;
+  --app-series-orange: #b97d5a;
+  --app-series-red: #b97277;
+  --viz-array-base: #556986;
+  --viz-grid: #29323b;
+  color: var(--app-text);
+  background: var(--app-bg);
+  font-family: "Segoe UI Variable", "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--app-bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: clip;
+  background: var(--app-bg);
+}
+
+#root {
+  width: 100%;
+  overflow-x: clip;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--app-focus);
+  outline-offset: 3px;
+}
+
+::selection {
+  color: var(--app-text);
+  background: color-mix(in srgb, var(--app-accent) 40%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+svg {
+  max-width: 100%;
+}
